@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-dark: #0c0503;
+  --white: #ffffff;
+}
+/*  #273647; */
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: white;
+}
+
+.btn__primary {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: var(--white);
+}
+.btn__primary:disabled,
+.btn__primary.mat-button-disabled,
+.mat-button.mat-button-disabled.mat-button-disabled.btn__primary {
+  opacity: 0.8;
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: var(--white);
+  cursor: not-allowed;
+}
+
+.btn__primary.focus,
+.btn__primary:focus {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: var(--white);
+  box-shadow: 0 0 0 0.2rem rgb(39 54 71 / 50%);
+}

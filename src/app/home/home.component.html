@@ -1,0 +1,151 @@
+<div class="feature__product products__category--man">
+  <h1 class="feature__title">Men</h1>
+  <div class="product-container">
+    <div class="row product__items">
+      <ng-container *ngFor="let item of featureProductListMan; let i = index">
+        <div class="col-md-3 product__items--item" *ngIf="i < 4">
+          <a routerLink="/product/{{ item.id }}">
+            <mat-card class="product__card">
+              <div class="product__images">
+                <img
+                  mat-card-image
+                  src="{{ item.image }}"
+                  alt="{{ item.title }}"
+                  class="product__image--image"
+                />
+              </div>
+
+              <mat-card-title class="product__card--title">{{
+                item.title
+              }}</mat-card-title>
+              <mat-card-subtitle class="product__card--Price"
+                ><strong>${{ item.price }}</strong></mat-card-subtitle
+              >
+
+              <mat-card-content class="product__card--content">
+                <p>
+                  {{ item.description }}
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </a>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<div class="feature__product products__category--woman">
+  <h1 class="feature__title">Women</h1>
+  <div class="product-container">
+    <div class="row product__items">
+      <ng-container *ngFor="let item of featureProductList; let i = index">
+        <div class="col-md-3 product__items--item" *ngIf="i < 4">
+          <a routerLink="/product">
+            <mat-card class="product__card">
+              <div class="product__images">
+                <img
+                  mat-card-image
+                  src="{{ item.image }}"
+                  alt="{{ item.title }}"
+                  class="product__image--image"
+                />
+              </div>
+
+              <mat-card-title class="product__card--title">{{
+                item.title
+              }}</mat-card-title>
+              <mat-card-subtitle class="product__card--Price"
+                ><strong>${{ item.price }}</strong></mat-card-subtitle
+              >
+
+              <mat-card-content class="product__card--content">
+                <p>
+                  {{ item.description }}
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </a>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<div class="feature__product products__category--electronics">
+  <h1 class="feature__title">Electronics</h1>
+  <div class="product-container">
+    <div class="row product__items">
+      <ng-container
+        *ngFor="let item of featureProductListElectronics; let i = index"
+      >
+        <div class="col-md-3 product__items--item" *ngIf="i < 4">
+          <a routerLink="/product">
+            <mat-card class="product__card">
+              <div class="product__images">
+                <img
+                  mat-card-image
+                  src="{{ item.image }}"
+                  alt="{{ item.title }}"
+                  class="product__image--image"
+                />
+              </div>
+
+              <mat-card-title class="product__card--title">{{
+                item.title
+              }}</mat-card-title>
+              <mat-card-subtitle class="product__card--Price"
+                ><strong>${{ item.price }}</strong></mat-card-subtitle
+              >
+
+              <mat-card-content class="product__card--content">
+                <p>
+                  {{ item.description }}
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </a>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<div class="feature__product products__category--jewelery">
+  <h1 class="feature__title">Jewelery</h1>
+  <div class="product-container">
+    <div class="row product__items">
+      <ng-container
+        *ngFor="let item of featureProductListJewelery; let i = index"
+      >
+        <div class="col-md-3 product__items--item" *ngIf="i < 4">
+          <a routerLink="/product">
+            <mat-card class="product__card">
+              <div class="product__images">
+                <img
+                  mat-card-image
+                  src="{{ item.image }}"
+                  alt="{{ item.title }}"
+                  class="product__image--image"
+                />
+              </div>
+
+              <mat-card-title class="product__card--title">{{
+                item.title
+              }}</mat-card-title>
+              <mat-card-subtitle class="product__card--Price"
+                ><strong>${{ item.price }}</strong></mat-card-subtitle
+              >
+
+              <mat-card-content class="product__card--content">
+                <p>
+                  {{ item.description }}
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </a>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

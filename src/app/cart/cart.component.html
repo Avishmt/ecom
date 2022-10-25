@@ -1,0 +1,65 @@
+<div class="shopping__card">
+  <h1 class="shopping__card--title">Shopping Cart</h1>
+  <ng-container *ngIf="products.length != 0">
+    <div class="shopping__card--table">
+      <table class="table table-responsive">
+        <thead>
+          <tr>
+            <th class="col__th--id">Sr.No</th>
+            <th class="col__th--title">Product Name</th>
+            <th class="col__th--img">Product Image</th>
+            <th class="col__th--price">Price</th>
+
+            <th class="col__th__action">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of products; let i = index">
+            <td class="col__id">{{ i + 1 }}</td>
+            <td class="col__title">{{ item.title }}</td>
+            <td class="col__img">
+              <img src="{{ item.image }}" alt="" />
+            </td>
+
+            <td class="col__price">{{ item.price }}</td>
+
+            <td class="col__action">
+              <mat-icon (click)="removeItem(item)">delete</mat-icon>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="1"></td>
+            <td>
+              <button (click)="emptycart()" class="btn btn-danger">
+                Empty Cart
+              </button>
+            </td>
+            <td>
+              <button routerLink="/product" class="btn btn-primary">
+                Shop More
+              </button>
+            </td>
+            <td><button class="btn btn-success">Checkout</button></td>
+            <td>
+              <strong>Grend Totle:${{ grandTotal }}</strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="products.length == 0">
+    <div class="shopping__cart--empty">
+      <div class="shopping__cart--empty__image">
+        <img
+          src="../../assets/images/empty-card.gif"
+          alt="Empty Shopping card"
+        />
+      </div>
+      <p>
+        Your cart is empty. <br />
+        <a routerLink="/product">Shop Now</a>
+      </p>
+    </div>
+  </ng-container>
+</div>

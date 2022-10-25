@@ -1,0 +1,19 @@
+<mat-drawer-container class="drawer-container">
+  <mat-drawer #drawer mode="side" class="menu-drawer">
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="custom-header">
+      <button mat-mini-fab color="primary" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <div class="container">
+      <div class="inner-container">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+    <app-footer></app-footer>
+  </mat-drawer-content>
+</mat-drawer-container>

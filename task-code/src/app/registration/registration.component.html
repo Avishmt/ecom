@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="signup-form">
+    <mat-card>
+      <mat-card-title>
+        <h1>Registration</h1>
+      </mat-card-title>
+      <mat-card-content>
+        <form [formGroup]="regForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input
+              type="text"
+              name="fname"
+              id="fname"
+              class="form-control"
+              formControlName="fname"
+              [ngClass]="{ 'is-invalid': submitted && f.fname.errors }"
+            />
+            <div *ngIf="submitted && f.fname.errors" class="invalid-feedback">
+              <p>First Name Required!</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last name</label>
+            <input
+              type="text"
+              name="lname"
+              id="lname"
+              class="form-control"
+              formControlName="lname"
+              [ngClass]="{ 'is-invalid': submitted && f.lname.errors }"
+            />
+            <div *ngIf="submitted && f.lname.errors" class="invalid-feedback">
+              <p>Last Name Required!</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-control"
+              formControlName="email"
+              [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+            />
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <p>Email Required!</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="form-control"
+              formControlName="password"
+              [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+            />
+            <div
+              *ngIf="submitted && f.password.errors"
+              class="invalid-feedback"
+            >
+              <p>Password Required!</p>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

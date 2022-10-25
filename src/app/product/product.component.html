@@ -1,0 +1,79 @@
+<!-- <div class="cart-top container-fluid">
+  <div class="container d-flex">
+    <div class="item">
+      <img src="../../assets/images/electronic.jpg" />
+      <h4>this is my app</h4>
+    </div>
+    <div class="item">
+      <img src="../../assets/images/electronic.jpg" />
+      <h4>this is my app</h4>
+    </div>
+    <div class="item">
+      <img src="../../assets/images/img1.jpg" />
+      <h4>this is my app</h4>
+    </div>
+  </div>
+</div> -->
+<div class="product-container">
+  <div class="row product__items">
+    <ng-container *ngFor="let item of productList | filter: searchKey:'title'">
+      <div class="col-md-3 product__items--item">
+        <!-- <div class="card">
+          <div class="product__image">
+            <img src="{{ item.image }}" alt="{{ item.title }}" />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ item.title }}
+            </h5>
+            <p class="card-text">
+              {{ item.description }}
+            </p>
+            <p><strong>price:</strong>${{ item.price }}</p>
+            <div class="actions">
+              <button
+                class="btn btn-primary btn__card"
+                (click)="addtocart(item)"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div> -->
+
+        <mat-card class="product__card">
+          <div class="product__images">
+            <img
+              mat-card-image
+              src="{{ item.image }}"
+              alt="{{ item.title }}"
+              class="product__image--image"
+            />
+          </div>
+
+          <mat-card-title class="product__card--title">{{
+            item.title
+          }}</mat-card-title>
+          <mat-card-subtitle class="product__card--Price"
+            ><strong>${{ item.price }}</strong></mat-card-subtitle
+          >
+
+          <mat-card-content class="product__card--content">
+            <p>
+              {{ item.description }}
+            </p>
+          </mat-card-content>
+          <mat-card-actions class="product__card--actions">
+            <button
+              mat-button
+              (click)="addtocart(item)"
+              class="btn__card btn__primary"
+            >
+              Add to Cart
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </ng-container>
+  </div>
+</div>

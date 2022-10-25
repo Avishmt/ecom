@@ -1,0 +1,19 @@
+.login__container {
+  max-width: 35rem;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.bottom__link {
+  margin-top: 1rem;
+}
+
+.bottom__link p {
+  color: var(--primary-dark);
+}
+
+.bottom__link a {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}

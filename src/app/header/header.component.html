@@ -1,0 +1,46 @@
+<div class="navbar__items">
+  <!-- <div class="navbar navbar-dark"> -->
+  <div class="navbar__item">
+    <a
+      routerLink="/"
+      routerLinkActive="list-item-active"
+      mat-list-item
+      color="default"
+      ><mat-icon class="nav__icon">home</mat-icon></a
+    >
+  </div>
+  <div class="navbar__item">
+    <div class="search">
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="searchTerm"
+          (keyup)="search($event)"
+          placeholder="search..."
+        />
+      </div>
+      <!-- <span><mat-icon>mic</mat-icon></span> -->
+      <mat-icon aria-hidden="false" aria-label="Search icon" class="search-icon" 
+      
+        >search</mat-icon
+      >
+    </div>
+  </div>
+  <div class="navbar__item">
+    <a routerLink="/product" routerLinkActive="list-item-active">Product</a>
+    <a
+      routerLink="/login"
+      routerLinkActive="list-item-active"
+      mat-list-item
+      color="default"
+      ><mat-icon class="nav__icon">account_circle</mat-icon></a
+    >
+    <a routerLink="/cart" class="shopping__card">
+      <mat-icon class="nav__icon shopping__card--icon">shopping_cart</mat-icon>
+      <div class="badge bg-danger shopping__card--bage">{{ totalItem }}</div>
+    </a>
+  </div>
+
+  <!-- <i class="bi bi-cart4"></i> -->
+</div>

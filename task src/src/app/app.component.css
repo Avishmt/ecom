@@ -1,0 +1,55 @@
+.drawer-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.mat-drawer {
+  /* background: #595959; */
+  background: #273647;
+}
+.menu-drawer {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-links {
+  padding: 2rem 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu-links li {
+  padding: 0 2rem;
+  margin-bottom: 15px;
+}
+
+.menu-links li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.custom-header {
+  display: flex;
+  padding: 15px;
+  /* background: #3f51b5; */
+  /* background: #737373; */
+  background: #273647;
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.mat-flat-button.mat-primary,
+.mat-raised-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary {
+  background-color: #273647;
+}

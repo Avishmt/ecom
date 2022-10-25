@@ -1,0 +1,92 @@
+<div class="cantainer">
+  <div class="signup-form">
+    <mat-card-title>
+    <h1>Signup</h1>
+    </mat-card-title>
+    <mat-card-content>
+     <form [formGroup]="reactiveForm"(ngSubmit)="onsubmit()">  
+          <label for="fname"> First Name</label>
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            class="form-control"
+            formControlName=" fname"
+            [ngClass]="{'is-invalid': submitted && f.fname.errors}"
+          />
+
+          <div *ngIf="submitted && f.fname.errors" class="invalid-feedback">
+            <div *ngIf="f.fname.errors.required">
+              <p>first name is required</p>
+            </div>
+          </div>
+          <label for="lname"> Last Name</label>
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            class="form-control"
+            formControlName=" lname"
+            [ngClass]="{ 'is-invalid':submitted && f.lname.errors}"
+
+          />
+          <div *ngIf="submitted && f.fname.errors" class="invalid-feedback">
+            <div *ngIf="f.fname.errors.required">
+              <p>first name is required</p>
+            </div>
+          </div>
+          <label>Email</label>
+          <input
+            type="text"
+            formControlName="email"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+          />
+          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+            <div *ngIf="f.email.errors.email">Email is invalid</div>
+          </div>
+        
+          <label for="pwd"> Password</label>
+          <input
+            type="password"
+            name="pwd"
+            id="pwd"
+            class="form-control"
+            formControlName=" pwd"
+            [ngClass]="{'is invalid':submitted && f.pwd.errors}"
+          />
+          <div *ngIf="submitted && f.pwd.errors"class="invalid-feedback">
+          <div *ngIf="f.pwd.errors.required">Password is required</div>
+          <div *ngIf="f.pwd.errors.pwd">password is invalid</div>
+          
+
+          </div>
+          <label for="cpwd"> Confirm</label>
+          <input
+            type="password"
+            name="cpwd"
+            id="cpwd"
+            class="form-control"
+            formControlName=" cpwd"
+          />
+          <label for="mob-no">Mobile Number</label>
+          <input
+            type="number"
+            name="mnumber"
+            id="mnumbr"
+            class="form-control"
+            formControlName="mnumber"
+          />
+          <div class="redio">
+            <label>Gender</label>
+            <input type="radio" name="gender" value="male" />Male
+            <input type="radio" name="gender" value="female" />Female
+          </div>
+
+          <button type="submit" class="btn btn-primary">submit</button>
+        
+      </form>
+    </mat-card-content>
+  </div>
+</div>
